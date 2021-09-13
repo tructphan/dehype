@@ -17,9 +17,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -61,8 +61,8 @@ ul {
 li {
   margin-top: 1rem;
 }
-input, 
-select, 
+input,
+select,
 textarea,
 button {
   padding: 1rem;
@@ -77,8 +77,8 @@ button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
-input:hover, 
-select:hover, 
+input:hover,
+select:hover,
 textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
@@ -165,10 +165,13 @@ img.large {
   color: #f0c040;
   margin: 0.1rem;
 }
-.rating span:last-child{
-  color: #404040
+.rating span:last-child {
+  color: #404040;
 }
 /* Alert */
+.loading {
+  display: block !important;
+}
 .success {
   color: #20a020;
 }
@@ -187,4 +190,50 @@ img.large {
 .alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
+}
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Checkout Steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: #f08000;
 }
